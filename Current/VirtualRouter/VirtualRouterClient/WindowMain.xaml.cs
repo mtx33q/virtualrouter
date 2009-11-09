@@ -30,6 +30,16 @@ namespace VirtualRouterClient
         {
             InitializeComponent();
 
+            var args = System.Environment.GetCommandLineArgs();
+            var minarg = (from a in args
+                          where a.ToLowerInvariant().Contains("/min")
+                          select a).FirstOrDefault();
+            if (!string.IsNullOrEmpty(minarg))
+            {
+                this.WindowState = WindowState.Minimized;
+                this.ShowInTaskbar = false;
+            }
+
             this.Loaded += new RoutedEventHandler(Window1_Loaded);
 
             myApp.VirtualRouterServiceConnected += new EventHandler(myApp_VirtualRouterServiceConnected);

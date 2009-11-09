@@ -19,7 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		Readme.txt = Readme.txt
 		TODO.txt = TODO.txt
+		VirtualRouter.jpg = VirtualRouter.jpg
 		VirtualRouter.pdn = VirtualRouter.pdn
+		VirtualRouterSetupBanner.jpg = VirtualRouterSetupBanner.jpg
 	EndProjectSection
 EndProject
 Global
