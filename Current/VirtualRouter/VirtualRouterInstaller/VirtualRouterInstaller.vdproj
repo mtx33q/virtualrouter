@@ -520,7 +520,7 @@
         {
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_4F26FC34328E4A5EA810CB679F88CA37"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFilesFolder]\\Virtual Router"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -589,9 +589,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Virtual Router"
+        "ProductName" = "8:Virtual Router v0.8 Beta"
         "ProductCode" = "8:{74DEDA1E-E187-461C-9E64-EA717DCF9FAA}"
-        "PackageCode" = "8:{90F5BEF1-1221-479E-A1BF-AA2CECAC444F}"
+        "PackageCode" = "8:{C9682C05-AE6E-449D-93C2-FAA4E0EB6EE7}"
         "UpgradeCode" = "8:{B678C270-B87E-4F13-81A0-2CFB8A2A30DC}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
@@ -601,7 +601,7 @@
         "Manufacturer" = "8:Chris Pietschmann"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://virtualrouter.codeplex.com"
-        "Title" = "8:Virtual Router Alpha 1"
+        "Title" = "8:Virtual Router"
         "Subject" = "8:http://virtualrouter.codeplex.com"
         "ARPCONTACT" = "8:Chris Pietschmann"
         "Keywords" = "8:"

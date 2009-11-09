@@ -13,6 +13,7 @@ using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Media.Imaging;
 using VirtualRouterClient.VirtualRouterService;
+using System.Diagnostics;
 
 namespace VirtualRouterClient
 {
@@ -30,6 +31,14 @@ namespace VirtualRouterClient
         {
             InitializeComponent();
 
+            this.Loaded += new RoutedEventHandler(Window1_Loaded);
+
+            myApp.VirtualRouterServiceConnected += new EventHandler(myApp_VirtualRouterServiceConnected);
+            myApp.VirtualRouterServiceDisconnected += new EventHandler(myApp_VirtualRouterServiceDisconnected);
+        }
+
+        private void Window1_Loaded(object sender, RoutedEventArgs e)
+        {
             var args = System.Environment.GetCommandLineArgs();
             var minarg = (from a in args
                           where a.ToLowerInvariant().Contains("/min")
@@ -40,14 +49,6 @@ namespace VirtualRouterClient
                 this.ShowInTaskbar = false;
             }
 
-            this.Loaded += new RoutedEventHandler(Window1_Loaded);
-
-            myApp.VirtualRouterServiceConnected += new EventHandler(myApp_VirtualRouterServiceConnected);
-            myApp.VirtualRouterServiceDisconnected += new EventHandler(myApp_VirtualRouterServiceDisconnected);
-        }
-
-        private void Window1_Loaded(object sender, RoutedEventArgs e)
-        {
             this.AddSystemMenuItems();
 
             this.threadUpdateUI = new Thread(new ThreadStart(this.UpdateUIThread));
@@ -68,12 +69,23 @@ namespace VirtualRouterClient
             var trayMenu = new System.Windows.Forms.ContextMenuStrip();
             trayMenu.Items.Add("&Manage Virtual Router...", null, new EventHandler(this.TrayIcon_Menu_Manage));
             trayMenu.Items.Add(new System.Windows.Forms.ToolStripSeparator());
+            trayMenu.Items.Add("Check for &Updates...", null, new EventHandler(this.TrayIcon_Menu_Update));
             trayMenu.Items.Add("&About...", null, new EventHandler(this.TrayIcon_Menu_About));
             this.trayIcon.ContextMenuStrip = trayMenu;
 
             this.StateChanged += new EventHandler(WindowMain_StateChanged);
 
             UpdateDisplay();
+        }
+
+        void TrayIcon_Menu_Update(object sender, EventArgs e)
+        {
+            CheckUpdates();
+        }
+
+        public static void CheckUpdates()
+        {
+            Process.Start("http://virtualrouter.codeplex.com");
         }
 
         void TrayIcon_Menu_About(object sender, EventArgs e)
@@ -174,6 +186,7 @@ namespace VirtualRouterClient
         #endregion 
 
         private const int _AboutSysMenuID = 1001;
+        private const int _UpdateSysMenuID = 1002;
 
         private void AddSystemMenuItems()
         {
@@ -181,7 +194,8 @@ namespace VirtualRouterClient
             IntPtr systemMenu = GetSystemMenu(windowHandle, false);
 
             InsertMenu(systemMenu, 5, MF_BYPOSITION | MF_SEPARATOR, 0, string.Empty);
-            InsertMenu(systemMenu, 6, MF_BYPOSITION, _AboutSysMenuID, "About...");
+            InsertMenu(systemMenu, 6, MF_BYPOSITION, _UpdateSysMenuID, "Check for Updates...");
+            InsertMenu(systemMenu, 7, MF_BYPOSITION, _AboutSysMenuID, "About...");
 
             HwndSource source = HwndSource.FromHwnd(windowHandle);
             source.AddHook(new HwndSourceHook(WndProc));
@@ -197,7 +211,10 @@ namespace VirtualRouterClient
                 {
                     case _AboutSysMenuID:
                         ShowAboutBox();
-
+                        handled = true;
+                        break;
+                    case _UpdateSysMenuID:
+                        CheckUpdates();
                         handled = true;
                         break;
                 }
@@ -213,7 +230,10 @@ namespace VirtualRouterClient
             System.Windows.MessageBox.Show(
                             AssemblyAttributes.AssemblyProduct + " " + AssemblyAttributes.AssemblyVersion + Environment.NewLine
                             + Environment.NewLine + AssemblyAttributes.AssemblyDescription + Environment.NewLine
-                            + Environment.NewLine + AssemblyAttributes.AssemblyCopyright
+                            + Environment.NewLine + "Licensed under the Microsoft Public License (Ms-PL)" + Environment.NewLine
+                            + Environment.NewLine + AssemblyAttributes.AssemblyCopyright + Environment.NewLine
+                            + Environment.NewLine + "http://virtualrouter.codeplex.com"
+                            
                             , "About " + AssemblyAttributes.AssemblyProduct + "...");
         }
 

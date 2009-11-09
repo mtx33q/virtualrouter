@@ -1,7 +1,7 @@
 ﻿<Window x:Class="VirtualRouterClient.WindowMain"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="Virtual Router Manager Beta v0.8" Height="421.776" Width="592.668" MinWidth="449.955" MinHeight="421.776"
+    Title="Virtual Router Manager v0.8 Beta" Height="421.776" Width="592.668" MinWidth="449.955" MinHeight="421.776"
     Icon="Icons/VirtualRouterDisabled.ico" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
     <Grid>
         <GroupBox Header="Virtual Router Settings" Margin="12,11.817,12,0" Name="gbVirtualRouterSettings" Height="117.261" VerticalAlignment="Top">
