@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2015bbf1-3592-406b-8642-e2470504101f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:31337/VirtualRouter/service" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="VirtualRouterHost.wsdl" MetadataType="Wsdl" ID="81ce31bb-2ba1-4c56-8d16-e3baabd03358" SourceId="1" SourceUrl="http://localhost:31337/VirtualRouter/service?wsdl" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d8755df4-c89e-4ebb-a0e4-a19d06c9a874" SourceId="1" SourceUrl="http://localhost:31337/VirtualRouter/service?wsdl=wsdl0" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="8934095e-3330-4905-8d9a-9f70c94674ae" SourceId="1" SourceUrl="http://localhost:31337/VirtualRouter/service?xsd=xsd2" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="6cc006e8-4030-487a-9d93-4e56a3fb7a82" SourceId="1" SourceUrl="http://localhost:31337/VirtualRouter/service?xsd=xsd0" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="aec71b89-c839-463b-ba6b-557417041e34" SourceId="1" SourceUrl="http://localhost:31337/VirtualRouter/service?xsd=xsd1" />
+    <MetadataFile FileName="service.disco" MetadataType="Disco" ID="7ab83828-de79-412a-a13b-a435b52c06dc" SourceId="1" SourceUrl="http://localhost:31337/VirtualRouter/service?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
