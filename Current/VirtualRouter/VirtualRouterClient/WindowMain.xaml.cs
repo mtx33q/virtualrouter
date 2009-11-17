@@ -239,34 +239,31 @@ namespace VirtualRouterClient
 
         private void btnToggleHostedNetwork_Click(object sender, RoutedEventArgs e)
         {
-            if (this.ValidateFields())
+            if (myApp.IsVirtualRouterServiceConnected)
             {
-                if (myApp.IsVirtualRouterServiceConnected)
+                if (myApp.VirtualRouter.IsStarted())
                 {
-                    if (myApp.VirtualRouter.IsStarted())
+                    myApp.VirtualRouter.Stop();
+                }
+                else
+                {
+                    if (this.ValidateFields())
                     {
-                        myApp.VirtualRouter.Stop();
-                    }
-                    else
-                    {
-                        if (this.ValidateFields())
+
+                        myApp.VirtualRouter.SetConnectionSettings(txtSSID.Text, 100);
+                        myApp.VirtualRouter.SetPassword(txtPassword.Text);
+
+                        if (!myApp.VirtualRouter.Start((SharableConnection)cbSharedConnection.SelectedItem))
                         {
-
-                            myApp.VirtualRouter.SetConnectionSettings(txtSSID.Text, 100);
-                            myApp.VirtualRouter.SetPassword(txtPassword.Text);
-
-                            if (!myApp.VirtualRouter.Start((SharableConnection)cbSharedConnection.SelectedItem))
-                            {
-                                string strMessage = "Virtual Router Could Not Be Started!";
-                                lblStatus.Content = strMessage;
-                                MessageBox.Show(strMessage, this.Title);
-                            }
-                            else
-                            {
-                                lblStatus.Content = "Virtual Router Started...";
-                            }
-
+                            string strMessage = "Virtual Router Could Not Be Started!";
+                            lblStatus.Content = strMessage;
+                            MessageBox.Show(strMessage, this.Title);
                         }
+                        else
+                        {
+                            lblStatus.Content = "Virtual Router Started...";
+                        }
+
                     }
                 }
             }
