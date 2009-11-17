@@ -1,12 +1,13 @@
 ﻿<UserControl x:Class="VirtualRouterClient.PeerDevice"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Width="256">
-    <Grid>
-        <Image Name="imgDeviceIcon" Source="Icons/Computer.ico" Stretch="Fill" VerticalAlignment="Top" Margin="5" HorizontalAlignment="Left" Width="32" />
-        <StackPanel Margin="38,5,4.2,5" Name="stackPanel1">
-            <Label Name="lblDisplayName" Height="17.982" FontSize="13" Padding="0" Width="204.5">Unknown (192.168.42.102)</Label>
-            <Label Height="10.8" Name="lblMACAddress" Width="196" FontSize="9" Padding="0">00-00-00-00-00-00</Label>
+    Width="333" Height="57">
+    <Grid Width="328">
+        <Image Name="imgDeviceIcon" Source="Icons/Computer.ico" Stretch="Fill" Margin="5,5,0,5" HorizontalAlignment="Left" Width="48" />
+        <StackPanel Margin="58.548,5,4.2,5" Name="stackPanel1">
+            <Label Name="lblDisplayName" Height="17.982" FontSize="13" Padding="0" Width="262.038" ToolTip="Unknown">Unknown</Label>
+            <Label Height="10.8" Name="lblMACAddress" Width="239" FontSize="9" Padding="0">MAC: 00-00-00-00-00-00</Label>
+            <Label FontSize="9" Height="10.8" Name="lblIPAddress" Padding="0" Width="238.5">IP: 192.168.42.102</Label>
         </StackPanel>
     </Grid>
 </UserControl>

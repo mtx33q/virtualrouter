@@ -36,12 +36,14 @@ namespace VirtualRouterClient
             {
                 this._Peer = value;
 
-                lblDisplayName.Content = this._Peer.MacAddress;
+                lblDisplayName.Content = lblDisplayName.ToolTip = this._Peer.MacAddress;
                 
                 lblMACAddress.Content = "";
+                lblIPAddress.Content = "";
                 
                 // TODO - Need to get IP Address
-                lblMACAddress.Content = "Retrieving IP Address...";
+                lblMACAddress.Content = "Retrieving Host Name...";
+                lblIPAddress.Content = "Retrieving IP Address...";
 
                 thread = new Thread(new ParameterizedThreadStart(this.getIPInfo));
                 thread.Start(this);
@@ -52,21 +54,22 @@ namespace VirtualRouterClient
         {
             if (ipinfo.HostName == ipinfo.IPAddress)
             {
-                lblDisplayName.Content = ipinfo.HostName;
+                lblDisplayName.Content = lblDisplayName.ToolTip = ipinfo.HostName;
             }
             else
             {
                 if (string.IsNullOrEmpty(ipinfo.HostName))
                 {
-                    lblDisplayName.Content = ipinfo.IPAddress;
+                    lblDisplayName.Content = lblDisplayName.ToolTip = ipinfo.IPAddress;
                 }
                 else
                 {
-                    lblDisplayName.Content = ipinfo.HostName + " (" + ipinfo.IPAddress + ")";
+                    lblDisplayName.Content = lblDisplayName.ToolTip = ipinfo.HostName;
                 }
             }
 
             this.lblMACAddress.Content = "MAC: " + ipinfo.MacAddress;
+            this.lblIPAddress.Content = "IP: " + ipinfo.IPAddress;
         }
 
         private void getIPInfo(object data)
