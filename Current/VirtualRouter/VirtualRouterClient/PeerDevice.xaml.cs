@@ -9,6 +9,7 @@
 using System.Windows.Controls;
 using VirtualRouterClient.VirtualRouterService;
 using System;
+using System.Windows;
 
 namespace VirtualRouterClient
 {
@@ -74,13 +75,33 @@ namespace VirtualRouterClient
 
         private void getIPInfo(object data)
         {
-            var pd = (PeerDevice)data;
-            var ipinfo = IPInfo.GetIPInfo(pd.Peer.MacAddress.Replace(":", "-"));
-            var hostname = ipinfo.HostName;
-            this.Dispatcher.Invoke((Action)delegate()
+            var ipinfoFound = false;
+            while (!ipinfoFound)
             {
-                this.SetIPInfoDisplay(ipinfo);
-            });
+                try
+                {
+                    var pd = data as PeerDevice;
+                    var ipinfo = IPInfo.GetIPInfo(pd.Peer.MacAddress.Replace(":", "-"));
+                    if (ipinfo != null)
+                    {
+                        var hostname = ipinfo.HostName;
+                        this.Dispatcher.Invoke((Action)delegate()
+                        {
+                            this.SetIPInfoDisplay(ipinfo);
+                        });
+                        ipinfoFound = true;
+                    }
+                    else
+                    {
+                        Thread.Sleep(1000);
+                        ipinfoFound = false;
+                    }
+                }
+                catch
+                {
+                    ipinfoFound = false;
+                }
+            }
         }
 
     }
