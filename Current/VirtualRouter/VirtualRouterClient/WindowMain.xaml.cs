@@ -14,6 +14,7 @@ using System.Windows.Interop;
 using System.Windows.Media.Imaging;
 using VirtualRouterClient.VirtualRouterService;
 using System.Diagnostics;
+using System.Collections.Generic;
 
 namespace VirtualRouterClient
 {
@@ -152,17 +153,66 @@ namespace VirtualRouterClient
 
             if (myApp.IsVirtualRouterServiceConnected)
             {
-                panelConnections.Children.Clear();
+                //panelConnections.Children.Clear();
                 var peers = myApp.VirtualRouter.GetConnectedPeers();
                 groupBoxPeersConnected.Header = "Peers Connected (" + peers.Count().ToString() + "):";
                 foreach (var p in peers)
                 {
-                    panelConnections.Children.Add(new PeerDevice(p));
+                    if (!this.isPeerAlreadyConnected(p))
+                    {
+                        panelConnections.Children.Add(new PeerDevice(p));
+                    }
                 }
+                this.removeDisconnectedPeers(peers);
             }
             else
             {
                 groupBoxPeersConnected.Header = "Peers Connected (0):";
+            }
+        }
+
+        private bool isPeerAlreadyConnected(ConnectedPeer peer)
+        {
+            foreach (var element in panelConnections.Children)
+            {
+                var elem = element as PeerDevice;
+                if (elem != null)
+                {
+                    if (elem.Peer.MacAddress.ToLowerInvariant() == peer.MacAddress.ToLowerInvariant())
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        private void removeDisconnectedPeers(ConnectedPeer[] peers)
+        {
+            List<PeerDevice> peersToRemove = new List<PeerDevice>();
+
+            foreach (var element in panelConnections.Children)
+            {
+                var elem = element as PeerDevice;
+                if (elem != null)
+                {
+                    var exists = false;
+                    foreach (var p in peers)
+                    {
+                        if (p.MacAddress.ToLowerInvariant() == elem.Peer.MacAddress.ToLowerInvariant())
+                        {
+                            exists = true;
+                            break;
+                        }
+                    }
+                    if (!exists)
+                    {
+                        peersToRemove.Add(elem);
+                    }
+                }
+            }
+            foreach (var elem in peersToRemove)
+            {
+                panelConnections.Children.Remove(elem);
             }
         }
 
