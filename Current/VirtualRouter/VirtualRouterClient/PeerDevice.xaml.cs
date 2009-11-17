@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 /*
 * Virtual Router v0.8 Beta - http://virtualrouter.codeplex.com
 * Wifi Hot Spot for Windows 7 and 2008 R2
@@ -8,8 +9,7 @@
 */
 using System.Windows.Controls;
 using VirtualRouterClient.VirtualRouterService;
-using System;
-using System.Windows;
+using System.Windows.Media;
 
 namespace VirtualRouterClient
 {
@@ -38,7 +38,9 @@ namespace VirtualRouterClient
                 this._Peer = value;
 
                 lblDisplayName.Content = lblDisplayName.ToolTip = this._Peer.MacAddress;
-                
+
+                ShowDeviceIcon();
+
                 lblMACAddress.Content = "";
                 lblIPAddress.Content = "";
                 
@@ -49,6 +51,11 @@ namespace VirtualRouterClient
                 thread = new Thread(new ParameterizedThreadStart(this.getIPInfo));
                 thread.Start(this);
             }
+        }
+
+        public void ShowDeviceIcon()
+        {
+            imgDeviceIcon.Source = (ImageSource)FindResource(DeviceIconManager.LoadIcon(this._Peer.MacAddress).Icon.ToResourceName());
         }
 
         public string IPAddress { get; set; }

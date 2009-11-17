@@ -110,6 +110,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyAttributes.cs" />
+    <Compile Include="DeviceIconEnum.cs" />
+    <Compile Include="DeviceIconManager.cs" />
     <Compile Include="IPInfo.cs" />
     <Compile Include="PeerDevice.xaml.cs">
       <DependentUpon>PeerDevice.xaml</DependentUpon>
@@ -210,7 +212,7 @@
   <ItemGroup>
     <Resource Include="Icons\Camera.ico" />
     <Resource Include="Icons\Printer.ico" />
-    <Resource Include="Icons\Telephone.ico" />
+    <Resource Include="Icons\MobilePhone.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\IPhone.ico" />

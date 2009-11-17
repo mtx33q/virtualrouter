@@ -46,5 +46,16 @@ namespace VirtualRouterClient.Properties {
                 this["Password"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.ArrayList DeviceIcons {
+            get {
+                return ((global::System.Collections.ArrayList)(this["DeviceIcons"]));
+            }
+            set {
+                this["DeviceIcons"] = value;
+            }
+        }
     }
 }
