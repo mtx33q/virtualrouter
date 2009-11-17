@@ -7,16 +7,8 @@
     <Grid>
         <GroupBox Header="Virtual Router Settings" Margin="12,11.817,12,0" Name="gbVirtualRouterSettings" Height="117.261" VerticalAlignment="Top">
             <Grid Height="98.172">
-                <TextBox Height="23" Margin="140,6,67.266,0" Name="txtSSID" VerticalAlignment="Top">
-                    <TextBox.Text>
-                        VirtualRouter
-                    </TextBox.Text>
-                </TextBox>
-                <TextBox Margin="140,35,67.266,41.132" Name="txtPassword">
-                    <TextBox.Text>
-                        ShareWiFi
-                    </TextBox.Text>
-                </TextBox>
+                <TextBox Height="23" Margin="140,6,67.266,0" Name="txtSSID" VerticalAlignment="Top"></TextBox>
+                <TextBox Margin="140,35,67.266,41.132" Name="txtPassword"></TextBox>
                 <Label Margin="7,32.54,0,0" Name="label1" HorizontalAlignment="Left" Width="120" Height="24.543" VerticalAlignment="Top">Password:</Label>
                 <Label HorizontalAlignment="Left" Margin="6,4,0,0" Name="label2" Width="128" Height="27.04" VerticalAlignment="Top">Network Name (SSID):</Label>
                 <Label Margin="7,62.96,0,0" Name="label3" HorizontalAlignment="Left" Width="121" Height="26.39" VerticalAlignment="Top">Shared Connection:</Label>

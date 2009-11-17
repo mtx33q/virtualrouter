@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using VirtualRouterClient.VirtualRouterService;
 using System.Diagnostics;
 using System.Collections.Generic;
+using VirtualRouterClient.Properties;
 
 namespace VirtualRouterClient
 {
@@ -33,13 +34,25 @@ namespace VirtualRouterClient
             InitializeComponent();
 
             this.Loaded += new RoutedEventHandler(Window1_Loaded);
+            this.Closing += new System.ComponentModel.CancelEventHandler(WindowMain_Closing);
 
             myApp.VirtualRouterServiceConnected += new EventHandler(myApp_VirtualRouterServiceConnected);
             myApp.VirtualRouterServiceDisconnected += new EventHandler(myApp_VirtualRouterServiceDisconnected);
         }
 
+        private void WindowMain_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Settings.Default.SSID = txtSSID.Text;
+            Settings.Default.Password = txtPassword.Text;
+            Settings.Default.Save();
+        }
+
         private void Window1_Loaded(object sender, RoutedEventArgs e)
         {
+            txtSSID.Text = Settings.Default.SSID;
+            txtPassword.Text = Settings.Default.Password;
+
+
             var args = System.Environment.GetCommandLineArgs();
             var minarg = (from a in args
                           where a.ToLowerInvariant().Contains("/min")
