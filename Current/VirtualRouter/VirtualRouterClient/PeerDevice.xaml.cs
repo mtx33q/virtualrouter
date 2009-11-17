@@ -8,6 +8,7 @@
 */
 using System.Windows.Controls;
 using VirtualRouterClient.VirtualRouterService;
+using System;
 
 namespace VirtualRouterClient
 {
@@ -40,44 +41,44 @@ namespace VirtualRouterClient
                 lblMACAddress.Content = "";
                 
                 // TODO - Need to get IP Address
-                //lblMACAddress.Content = "Retrieving IP Address...";
+                lblMACAddress.Content = "Retrieving IP Address...";
 
-                //thread = new Thread(new ParameterizedThreadStart(this.getIPInfo));
-                //thread.Start(this);
+                thread = new Thread(new ParameterizedThreadStart(this.getIPInfo));
+                thread.Start(this);
             }
         }
 
-        //private void SetIPInfoDisplay(IPInfo ipinfo)
-        //{
-        //    if (ipinfo.HostName == ipinfo.IPAddress)
-        //    {
-        //        lblDisplayName.Content = ipinfo.HostName;
-        //    }
-        //    else
-        //    {
-        //        if (string.IsNullOrEmpty(ipinfo.HostName))
-        //        {
-        //            lblDisplayName.Content = ipinfo.IPAddress;
-        //        }
-        //        else
-        //        {
-        //            lblDisplayName.Content = ipinfo.HostName + " (" + ipinfo.IPAddress + ")";
-        //        }
-        //    }
+        private void SetIPInfoDisplay(IPInfo ipinfo)
+        {
+            if (ipinfo.HostName == ipinfo.IPAddress)
+            {
+                lblDisplayName.Content = ipinfo.HostName;
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(ipinfo.HostName))
+                {
+                    lblDisplayName.Content = ipinfo.IPAddress;
+                }
+                else
+                {
+                    lblDisplayName.Content = ipinfo.HostName + " (" + ipinfo.IPAddress + ")";
+                }
+            }
 
-        //    this.lblMACAddress.Content = "MAC: " + ipinfo.MacAddress;
-        //}
+            this.lblMACAddress.Content = "MAC: " + ipinfo.MacAddress;
+        }
 
-        //private void getIPInfo(object data)
-        //{
-        //    var pd = (PeerDevice)data;
-        //    var ipinfo = IPInfo.GetIPInfo(pd.Peer.MacAddress);
-        //    var hostname = ipinfo.HostName;
-        //    this.Dispatcher.Invoke((Action)delegate()
-        //    {
-        //        this.SetIPInfoDisplay(ipinfo);
-        //    });
-        //}
+        private void getIPInfo(object data)
+        {
+            var pd = (PeerDevice)data;
+            var ipinfo = IPInfo.GetIPInfo(pd.Peer.MacAddress.Replace(":", "-"));
+            var hostname = ipinfo.HostName;
+            this.Dispatcher.Invoke((Action)delegate()
+            {
+                this.SetIPInfoDisplay(ipinfo);
+            });
+        }
 
     }
 }
