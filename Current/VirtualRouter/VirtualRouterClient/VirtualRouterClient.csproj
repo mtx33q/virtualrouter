@@ -91,6 +91,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PeerDeviceProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WindowMain.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -109,6 +113,9 @@
     <Compile Include="IPInfo.cs" />
     <Compile Include="PeerDevice.xaml.cs">
       <DependentUpon>PeerDevice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PeerDeviceProperties.xaml.cs">
+      <DependentUpon>PeerDeviceProperties.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

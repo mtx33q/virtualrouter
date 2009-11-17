@@ -51,6 +51,9 @@ namespace VirtualRouterClient
             }
         }
 
+        public string IPAddress { get; set; }
+        public string HostName { get; set; }
+
         private void SetIPInfoDisplay(IPInfo ipinfo)
         {
             if (ipinfo.HostName == ipinfo.IPAddress)
@@ -71,6 +74,9 @@ namespace VirtualRouterClient
 
             this.lblMACAddress.Content = "MAC: " + ipinfo.MacAddress;
             this.lblIPAddress.Content = "IP: " + ipinfo.IPAddress;
+
+            this.IPAddress = ipinfo.IPAddress;
+            this.HostName = ipinfo.HostName;
         }
 
         private void getIPInfo(object data)
@@ -102,6 +108,12 @@ namespace VirtualRouterClient
                     ipinfoFound = false;
                 }
             }
+        }
+
+        private void UserControl_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            var window = new PeerDeviceProperties(this);
+            window.ShowDialog();
         }
 
     }
