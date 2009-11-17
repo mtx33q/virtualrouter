@@ -6,3 +6,4 @@
 * http://virtualrouter.codeplex.com/license
 */
 
+Some of the icons used in this project were copied from the "Wireless Hosted Network" sample within the Microsoft Windows 7 SDK.
