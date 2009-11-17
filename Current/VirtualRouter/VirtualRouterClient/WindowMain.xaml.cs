@@ -239,32 +239,72 @@ namespace VirtualRouterClient
 
         private void btnToggleHostedNetwork_Click(object sender, RoutedEventArgs e)
         {
-            if (myApp.IsVirtualRouterServiceConnected)
+            if (this.ValidateFields())
             {
-                if (myApp.VirtualRouter.IsStarted())
+                if (myApp.IsVirtualRouterServiceConnected)
                 {
-                    myApp.VirtualRouter.Stop();
-                }
-                else
-                {
-
-                    myApp.VirtualRouter.SetConnectionSettings(txtSSID.Text, 100);
-                    myApp.VirtualRouter.SetPassword(txtPassword.Text);
-
-                    if (!myApp.VirtualRouter.Start((SharableConnection)cbSharedConnection.SelectedItem))
+                    if (myApp.VirtualRouter.IsStarted())
                     {
-                        string strMessage = "Virtual Router Could Not Be Started!";
-                        lblStatus.Content = strMessage;
-                        MessageBox.Show(strMessage, this.Title);
+                        myApp.VirtualRouter.Stop();
                     }
                     else
                     {
-                        lblStatus.Content = "Virtual Router Started...";
+                        if (this.ValidateFields())
+                        {
+
+                            myApp.VirtualRouter.SetConnectionSettings(txtSSID.Text, 100);
+                            myApp.VirtualRouter.SetPassword(txtPassword.Text);
+
+                            if (!myApp.VirtualRouter.Start((SharableConnection)cbSharedConnection.SelectedItem))
+                            {
+                                string strMessage = "Virtual Router Could Not Be Started!";
+                                lblStatus.Content = strMessage;
+                                MessageBox.Show(strMessage, this.Title);
+                            }
+                            else
+                            {
+                                lblStatus.Content = "Virtual Router Started...";
+                            }
+
+                        }
                     }
                 }
             }
 
             UpdateUIDisplay();
+        }
+
+        private bool ValidateFields()
+        {
+            var errorMessage = string.Empty;
+
+            if (txtSSID.Text.Length <= 0)
+            {
+                errorMessage += "Network Name (SSID) is required." + Environment.NewLine;
+            }
+
+            if (txtSSID.Text.Length > 32)
+            {
+                errorMessage += "Network Name (SSID) can not be longer than 32 characters." + Environment.NewLine;
+            }
+
+            if (txtPassword.Text.Length < 8)
+            {
+                errorMessage += "Password must be at least 8 characters." + Environment.NewLine;
+            }
+
+            if (txtPassword.Text.Length > 64)
+            {
+                errorMessage += "Password can not be longer than 64 characters." + Environment.NewLine;
+            }
+
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                MessageBox.Show(errorMessage, "", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            return true;
         }
 
         private bool isVirtualRouterRunning = false;
