@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿/*
+* Virtual Router v0.8 Beta - http://virtualrouter.codeplex.com
+* Wifi Hot Spot for Windows 7 and 2008 R2
+* Copyright (c) 2009 Chris Pietschmann (http://pietschsoft.com)
+* Licensed under the Microsoft Public License (Ms-PL)
+* http://virtualrouter.codeplex.com/license
+*/
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using VirtualRouterClient.AeroGlass;
 
 namespace VirtualRouterClient
 {
@@ -24,7 +21,14 @@ namespace VirtualRouterClient
 
             InitializeComponent();
 
+            this.Loaded += new RoutedEventHandler(PeerDeviceProperties_Loaded);
+
             this.UpdateDisplay();
+        }
+
+        private void PeerDeviceProperties_Loaded(object sender, RoutedEventArgs e)
+        {
+            AeroGlassHelper.ExtendGlass(this, (int)windowContent.Margin.Left, (int)windowContent.Margin.Right, (int)windowContent.Margin.Top, (int)windowContent.Margin.Bottom);
         }
 
         public PeerDevice PeerDevice { get; private set; }
@@ -33,7 +37,8 @@ namespace VirtualRouterClient
         {
             if (this.PeerDevice != null)
             {
-                this.imgDeviceIcon.Source = this.PeerDevice.imgDeviceIcon.Source;
+                this.Icon = this.imgDeviceIcon.Source = this.PeerDevice.imgDeviceIcon.Source;
+
                 this.lblDisplayName.Content = this.lblDisplayName.ToolTip = this.Title = this.PeerDevice.lblDisplayName.Content.ToString();
 
                 this.txtMACAddress.Text = this.PeerDevice.Peer.MacAddress;

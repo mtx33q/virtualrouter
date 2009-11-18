@@ -16,6 +16,7 @@ using VirtualRouterClient.VirtualRouterService;
 using System.Diagnostics;
 using System.Collections.Generic;
 using VirtualRouterClient.Properties;
+using VirtualRouterClient.AeroGlass;
 
 namespace VirtualRouterClient
 {
@@ -49,9 +50,13 @@ namespace VirtualRouterClient
 
         private void Window1_Loaded(object sender, RoutedEventArgs e)
         {
+            AeroGlassHelper.ExtendGlass(this, (int)windowContent.Margin.Left, (int)windowContent.Margin.Right, (int)windowContent.Margin.Top, (int)windowContent.Margin.Bottom);
+
             txtSSID.Text = Settings.Default.SSID;
             txtPassword.Text = Settings.Default.Password;
 
+            // This line is for testing purposes
+            //panelConnections.Children.Add(new PeerDevice(new ConnectedPeer() { MacAddress = "AA-22-33-EE-EE-FF" }));
 
             var args = System.Environment.GetCommandLineArgs();
             var minarg = (from a in args
@@ -390,7 +395,7 @@ namespace VirtualRouterClient
 
                         if (!isVirtualRouterRunning)
                         {
-                            this.Icon = BitmapFrame.Create(Application.GetResourceStream(new Uri("Icons/VirtualRouterEnabled.ico", UriKind.Relative)).Stream);
+                            this.Icon = this.imgIcon.Source = BitmapFrame.Create(Application.GetResourceStream(new Uri("Icons/VirtualRouterEnabled.ico", UriKind.Relative)).Stream);
                         }
                         isVirtualRouterRunning = true;
 
@@ -408,7 +413,7 @@ namespace VirtualRouterClient
 
                         if (isVirtualRouterRunning)
                         {
-                            this.Icon = BitmapFrame.Create(Application.GetResourceStream(new Uri("Icons/VirtualRouterDisabled.ico", UriKind.Relative)).Stream);
+                            this.Icon = this.imgIcon.Source = BitmapFrame.Create(Application.GetResourceStream(new Uri("Icons/VirtualRouterDisabled.ico", UriKind.Relative)).Stream);
                         }
                         isVirtualRouterRunning = false;
                     }

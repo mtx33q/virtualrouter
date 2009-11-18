@@ -109,6 +109,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AeroGlass\AeroGlassHelper.cs" />
     <Compile Include="AssemblyAttributes.cs" />
     <Compile Include="DeviceIconEnum.cs" />
     <Compile Include="DeviceIconManager.cs" />
