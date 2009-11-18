@@ -49,9 +49,10 @@ namespace VirtualRouterClient.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Collections.ArrayList DeviceIcons {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DeviceIcons {
             get {
-                return ((global::System.Collections.ArrayList)(this["DeviceIcons"]));
+                return ((string)(this["DeviceIcons"]));
             }
             set {
                 this["DeviceIcons"] = value;

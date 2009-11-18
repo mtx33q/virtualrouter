@@ -8,7 +8,7 @@
     <Setting Name="Password" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="DeviceIcons" Type="System.Collections.ArrayList" Scope="User">
+    <Setting Name="DeviceIcons" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>
