@@ -16,6 +16,6 @@
         <TextBox Margin="107,59.5,12,0" Name="txtHostName" Height="23" IsReadOnly="True" VerticalAlignment="Top" />
         
         <Button Height="23" HorizontalAlignment="Right" Margin="0,0,12,0" Name="btnClose" VerticalAlignment="Bottom" Width="75" IsCancel="True" IsDefault="True">_Close</Button>
-        <Button Height="23" Margin="182.253,0,113.043,0" Name="btnChangeIcon" VerticalAlignment="Bottom" IsEnabled="False">Change Icon</Button>
+        <Button Height="23" Margin="182.253,0,113.043,0" Name="btnChangeIcon" VerticalAlignment="Bottom" Click="btnChangeIcon_Click">Change Icon</Button>
     </Grid>
 </Window>

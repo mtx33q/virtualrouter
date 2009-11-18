@@ -88,10 +88,21 @@ namespace VirtualRouterClient
             this.HostName = ipinfo.HostName;
         }
 
+        private void SetIPNotFound()
+        {
+            this.lblMACAddress.Content = "Host Name could not be found.";
+            this.lblIPAddress.Content = "IP Address could not be found.";
+        }
+
         private void getIPInfo(object data)
         {
             var ipinfoFound = false;
-            while (!ipinfoFound)
+            var count = 0;
+
+            // count is used to only check a certain number of times before giving up
+            // This will keep the thread from preventing the app from exiting when the user closes the main window.
+
+            while (!ipinfoFound && count < 10)
             {
                 try
                 {
@@ -116,6 +127,14 @@ namespace VirtualRouterClient
                 {
                     ipinfoFound = false;
                 }
+                count++;
+            }
+            if (!ipinfoFound)
+            {
+                this.Dispatcher.Invoke((Action)delegate()
+                {
+                    this.SetIPNotFound();
+                });
             }
         }
 

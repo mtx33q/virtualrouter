@@ -46,5 +46,14 @@ namespace VirtualRouterClient
                 this.txtHostName.Text = this.PeerDevice.HostName;
             }
         }
+
+        private void btnChangeIcon_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new DeviceIconPicker();
+            dialog.Owner = this;
+            if (dialog.ShowDialog() == true)
+            {
+            }
+        }
     }
 }

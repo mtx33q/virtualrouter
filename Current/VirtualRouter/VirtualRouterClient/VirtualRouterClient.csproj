@@ -87,6 +87,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="DeviceIcon\DeviceIconPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PeerDevice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -111,8 +115,12 @@
   <ItemGroup>
     <Compile Include="AeroGlass\AeroGlassHelper.cs" />
     <Compile Include="AssemblyAttributes.cs" />
-    <Compile Include="DeviceIconEnum.cs" />
-    <Compile Include="DeviceIconManager.cs" />
+    <Compile Include="DeviceIcon\DeviceIconPicker.xaml.cs">
+      <DependentUpon>DeviceIconPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceIcon\DeviceIconEnum.cs" />
+    <Compile Include="DeviceIcon\DeviceIconManager.cs" />
+    <Compile Include="ImagePathConverter.cs" />
     <Compile Include="IPInfo.cs" />
     <Compile Include="PeerDevice.xaml.cs">
       <DependentUpon>PeerDevice.xaml</DependentUpon>
@@ -138,6 +146,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="TileView.cs" />
     <Compile Include="VirtualRouterClientInstaller.cs">
       <SubType>Component</SubType>
     </Compile>
