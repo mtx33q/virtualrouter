@@ -1,15 +1,14 @@
 ﻿using System;
-using System.IO;
 using System.Windows.Data;
-using System.Windows.Media.Imaging;
+using System.Windows.Media;
 
 namespace VirtualRouterClient
 {
-    public class ImagePathConverter : IValueConverter
+    public class ResourceToImageSourceConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            return new BitmapImage(new Uri((string)value, UriKind.Relative));
+            return (ImageSource)App.Current.FindResource(value.ToString());
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

@@ -56,7 +56,7 @@ namespace VirtualRouterClient
             txtPassword.Text = Settings.Default.Password;
 
             // This line is for testing purposes
-            //panelConnections.Children.Add(new PeerDevice(new ConnectedPeer() { MacAddress = "AA-22-33-EE-EE-FF" }));
+            panelConnections.Children.Add(new PeerDevice(new ConnectedPeer() { MacAddress = "AA-22-33-EE-EE-FF" }));
 
             var args = System.Environment.GetCommandLineArgs();
             var minarg = (from a in args

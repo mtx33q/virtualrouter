@@ -39,7 +39,7 @@ namespace VirtualRouterClient
 
                 lblDisplayName.Content = lblDisplayName.ToolTip = this._Peer.MacAddress;
 
-                ShowDeviceIcon();
+                UpdateDeviceIcon();
 
                 lblMACAddress.Content = "";
                 lblIPAddress.Content = "";
@@ -53,7 +53,7 @@ namespace VirtualRouterClient
             }
         }
 
-        public void ShowDeviceIcon()
+        public void UpdateDeviceIcon()
         {   
             var icon = DeviceIconManager.LoadIcon(this._Peer.MacAddress);
             var resourceName = icon.Icon.ToResourceName();
@@ -141,6 +141,7 @@ namespace VirtualRouterClient
         private void UserControl_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             var window = new PeerDeviceProperties(this);
+            window.Owner = App.Current.MainWindow;
             window.ShowDialog();
         }
 

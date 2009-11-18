@@ -99,6 +99,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WindowMain.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -120,7 +124,7 @@
     </Compile>
     <Compile Include="DeviceIcon\DeviceIconEnum.cs" />
     <Compile Include="DeviceIcon\DeviceIconManager.cs" />
-    <Compile Include="ImagePathConverter.cs" />
+    <Compile Include="ResourceToImageSourceConverter.cs" />
     <Compile Include="IPInfo.cs" />
     <Compile Include="PeerDevice.xaml.cs">
       <DependentUpon>PeerDevice.xaml</DependentUpon>

@@ -19,24 +19,46 @@ namespace VirtualRouterClient
     /// </summary>
     public partial class DeviceIconPicker : Window
     {
-        public DeviceIconPicker()
+        public DeviceIconPicker(string deviceName)
         {
             InitializeComponent();
+
+            lblInstructions.Content = "Choose the icon to display for " + deviceName + ".";
 
             this.Loaded += new RoutedEventHandler(DeviceIconPicker_Loaded);
 
 
-            var icons = new List<Icon>();
+            var icons = new List<PickerIcon>();
 
             var iconNames = Enum.GetNames(typeof(DeviceIconEnum));
             foreach (var n in iconNames)
             {
                 var e = (DeviceIconEnum)Enum.Parse(typeof(DeviceIconEnum), n);
-                icons.Add(new Icon() { Value = e, IconName = e.ToDescriptionString(), IconPath = e.ToResourceName() });
+                icons.Add(new PickerIcon() { Value = e, IconName = e.ToDescriptionString(), IconPath = e.ToResourceName() });
             }
 
             listIcons.ItemsSource = icons;
         }
+
+        public DeviceIconEnum SelectedIcon
+        {
+            get
+            {
+                return ((PickerIcon)listIcons.SelectedItem).Value;
+            }
+            set
+            {
+                foreach (var item in listIcons.Items)
+                {
+                    var icon = item as PickerIcon;
+                    if (icon.Value == value)
+                    {
+                        listIcons.SelectedItem = item;
+                    }
+                }
+            }
+        }
+
 
         void DeviceIconPicker_Loaded(object sender, RoutedEventArgs e)
         {
@@ -49,7 +71,7 @@ namespace VirtualRouterClient
             this.Close();
         }
 
-        public class Icon
+        public class PickerIcon
         {
             public string IconPath { get; set; }
             public string IconName { get; set; }

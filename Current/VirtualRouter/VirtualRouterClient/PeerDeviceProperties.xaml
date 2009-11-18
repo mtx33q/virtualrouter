@@ -1,7 +1,7 @@
 ﻿<Window x:Class="VirtualRouterClient.PeerDeviceProperties"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="PeerDeviceProperties" Height="216.858" Width="393" ShowInTaskbar="False" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    Title="PeerDeviceProperties" Height="243.004" Width="393" ShowInTaskbar="False" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
     <Grid>
         <Image Margin="12,0,0,0" Name="imgDeviceIcon" Stretch="Fill" Height="48" VerticalAlignment="Top" HorizontalAlignment="Left" Width="48" />
         <Label Height="48" Margin="66,0,12,0" Name="lblDisplayName" FontSize="19" FontWeight="Bold" VerticalAlignment="Top" ToolTip="DisplayName">DisplayName</Label>
@@ -16,6 +16,6 @@
         <TextBox Margin="107,59.5,12,0" Name="txtHostName" Height="23" IsReadOnly="True" VerticalAlignment="Top" />
         
         <Button Height="23" HorizontalAlignment="Right" Margin="0,0,12,0" Name="btnClose" VerticalAlignment="Bottom" Width="75" IsCancel="True" IsDefault="True">_Close</Button>
-        <Button Height="23" Margin="182.253,0,113.043,0" Name="btnChangeIcon" VerticalAlignment="Bottom" Click="btnChangeIcon_Click">Change Icon</Button>
+        <Button Height="23" Margin="182.253,0,113.043,0" Name="btnChangeIcon" VerticalAlignment="Bottom" Click="btnChangeIcon_Click">Change _Icon</Button>
     </Grid>
 </Window>

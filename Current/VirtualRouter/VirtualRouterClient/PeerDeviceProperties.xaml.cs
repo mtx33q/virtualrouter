@@ -49,10 +49,14 @@ namespace VirtualRouterClient
 
         private void btnChangeIcon_Click(object sender, RoutedEventArgs e)
         {
-            var dialog = new DeviceIconPicker();
+            var dialog = new DeviceIconPicker(lblDisplayName.Content.ToString());
+            dialog.SelectedIcon = DeviceIconManager.LoadIcon(this.PeerDevice.Peer.MacAddress).Icon;
             dialog.Owner = this;
             if (dialog.ShowDialog() == true)
             {
+                DeviceIconManager.SaveIcon(this.PeerDevice.Peer.MacAddress, dialog.SelectedIcon);
+                this.PeerDevice.UpdateDeviceIcon();
+                UpdateDisplay();
             }
         }
     }
