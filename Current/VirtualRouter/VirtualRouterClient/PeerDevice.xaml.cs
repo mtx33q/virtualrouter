@@ -54,8 +54,10 @@ namespace VirtualRouterClient
         }
 
         public void ShowDeviceIcon()
-        {
-            imgDeviceIcon.Source = (ImageSource)FindResource(DeviceIconManager.LoadIcon(this._Peer.MacAddress).Icon.ToResourceName());
+        {   
+            var icon = DeviceIconManager.LoadIcon(this._Peer.MacAddress);
+            var resourceName = icon.Icon.ToResourceName();
+            imgDeviceIcon.Source = (ImageSource)FindResource(resourceName);
         }
 
         public string IPAddress { get; set; }
