@@ -77,5 +77,10 @@ namespace VirtualRouterClient
             public string IconName { get; set; }
             public DeviceIconEnum Value { get; set; }
         }
+
+        private void listIcons_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            btnOK_Click(sender, new RoutedEventArgs());
+        }
     }
 }

@@ -24,6 +24,13 @@ namespace VirtualRouterClient
         {
             InitializeComponent();
 
+            this.ContextMenu = new ContextMenu();
+            var propertiesMenuItem = new MenuItem();
+            propertiesMenuItem.Header = "_Properties...";
+            propertiesMenuItem.Click+=new System.Windows.RoutedEventHandler(PropertiesMenuItem_Click);
+            this.ContextMenu.Items.Add(propertiesMenuItem);
+
+
             this.Peer = peer;
         }
 
@@ -139,6 +146,16 @@ namespace VirtualRouterClient
         }
 
         private void UserControl_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            ShowPropertiesDialog();
+        }
+
+        private void PropertiesMenuItem_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            ShowPropertiesDialog();
+        }
+
+        public void ShowPropertiesDialog()
         {
             var window = new PeerDeviceProperties(this);
             window.Owner = App.Current.MainWindow;
