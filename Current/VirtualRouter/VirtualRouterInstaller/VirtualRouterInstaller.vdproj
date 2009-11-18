@@ -15,20 +15,56 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_464EF31F209EC6FE366E81F829ECF695"
+        "MsmKey" = "8:_080C1B72446A19D8049128BAA75FC812"
         "OwnerKey" = "8:_60C96C10613C4542A8AE7EC12D9F22D4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_464EF31F209EC6FE366E81F829ECF695"
+        "MsmKey" = "8:_080C1B72446A19D8049128BAA75FC812"
         "OwnerKey" = "8:_B2AEC479D33647999FD47320FB65AD1D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_464EF31F209EC6FE366E81F829ECF695"
-        "OwnerKey" = "8:_7457D200E74E5F5656C5E3A010C9B19E"
+        "MsmKey" = "8:_080C1B72446A19D8049128BAA75FC812"
+        "OwnerKey" = "8:_40CE20CB6E3FAF8A05CAD56D04FB010D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_080C1B72446A19D8049128BAA75FC812"
+        "OwnerKey" = "8:_2FB0742BE7B85554B873B0CA0C4CE307"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2FB0742BE7B85554B873B0CA0C4CE307"
+        "OwnerKey" = "8:_60C96C10613C4542A8AE7EC12D9F22D4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2FB0742BE7B85554B873B0CA0C4CE307"
+        "OwnerKey" = "8:_B2AEC479D33647999FD47320FB65AD1D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2FB0742BE7B85554B873B0CA0C4CE307"
+        "OwnerKey" = "8:_40CE20CB6E3FAF8A05CAD56D04FB010D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_40CE20CB6E3FAF8A05CAD56D04FB010D"
+        "OwnerKey" = "8:_60C96C10613C4542A8AE7EC12D9F22D4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_40CE20CB6E3FAF8A05CAD56D04FB010D"
+        "OwnerKey" = "8:_B2AEC479D33647999FD47320FB65AD1D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -45,18 +81,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_7457D200E74E5F5656C5E3A010C9B19E"
-        "OwnerKey" = "8:_60C96C10613C4542A8AE7EC12D9F22D4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7457D200E74E5F5656C5E3A010C9B19E"
-        "OwnerKey" = "8:_B2AEC479D33647999FD47320FB65AD1D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_7E0974151EAA4A75AE712D9D1871F861"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -69,50 +93,50 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_C77330AA2530E83B152C5163163D23C1"
+        "MsmKey" = "8:_CB9FBCBB65B301036A7CD421E077648E"
         "OwnerKey" = "8:_60C96C10613C4542A8AE7EC12D9F22D4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C77330AA2530E83B152C5163163D23C1"
+        "MsmKey" = "8:_CB9FBCBB65B301036A7CD421E077648E"
         "OwnerKey" = "8:_B2AEC479D33647999FD47320FB65AD1D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C77330AA2530E83B152C5163163D23C1"
-        "OwnerKey" = "8:_7457D200E74E5F5656C5E3A010C9B19E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C77330AA2530E83B152C5163163D23C1"
-        "OwnerKey" = "8:_D2E51F14B4FA94ACE57F49A5AE332BD3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D2E51F14B4FA94ACE57F49A5AE332BD3"
-        "OwnerKey" = "8:_60C96C10613C4542A8AE7EC12D9F22D4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D2E51F14B4FA94ACE57F49A5AE332BD3"
-        "OwnerKey" = "8:_B2AEC479D33647999FD47320FB65AD1D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D2E51F14B4FA94ACE57F49A5AE332BD3"
-        "OwnerKey" = "8:_7457D200E74E5F5656C5E3A010C9B19E"
+        "MsmKey" = "8:_CB9FBCBB65B301036A7CD421E077648E"
+        "OwnerKey" = "8:_40CE20CB6E3FAF8A05CAD56D04FB010D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_60C96C10613C4542A8AE7EC12D9F22D4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_40CE20CB6E3FAF8A05CAD56D04FB010D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_CB9FBCBB65B301036A7CD421E077648E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2FB0742BE7B85554B873B0CA0C4CE307"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_080C1B72446A19D8049128BAA75FC812"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -125,30 +149,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_6DF9FFA751E047258582EFA9DD19C706"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7457D200E74E5F5656C5E3A010C9B19E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_464EF31F209EC6FE366E81F829ECF695"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D2E51F14B4FA94ACE57F49A5AE332BD3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C77330AA2530E83B152C5163163D23C1"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -368,20 +368,20 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_464EF31F209EC6FE366E81F829ECF695"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_080C1B72446A19D8049128BAA75FC812"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:VirtualRouter.Wlan, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Interop.NETCONLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_464EF31F209EC6FE366E81F829ECF695"
+                    "_080C1B72446A19D8049128BAA75FC812"
                     {
-                    "Name" = "8:VirtualRouter.Wlan.dll"
+                    "Name" = "8:Interop.NETCONLib.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:VirtualRouter.Wlan.dll"
+            "SourcePath" = "8:Interop.NETCONLib.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_4F26FC34328E4A5EA810CB679F88CA37"
@@ -399,14 +399,45 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7457D200E74E5F5656C5E3A010C9B19E"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2FB0742BE7B85554B873B0CA0C4CE307"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:VirtualRouterHost, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:VirtualRouter.ICS, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_7457D200E74E5F5656C5E3A010C9B19E"
+                    "_2FB0742BE7B85554B873B0CA0C4CE307"
+                    {
+                    "Name" = "8:VirtualRouter.ICS.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:VirtualRouter.ICS.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_4F26FC34328E4A5EA810CB679F88CA37"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_40CE20CB6E3FAF8A05CAD56D04FB010D"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:VirtualRouterHost, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_40CE20CB6E3FAF8A05CAD56D04FB010D"
                     {
                     "Name" = "8:VirtualRouterHost.dll"
                     "Attributes" = "3:512"
@@ -450,51 +481,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C77330AA2530E83B152C5163163D23C1"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CB9FBCBB65B301036A7CD421E077648E"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Interop.NETCONLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:VirtualRouter.Wlan, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_C77330AA2530E83B152C5163163D23C1"
+                    "_CB9FBCBB65B301036A7CD421E077648E"
                     {
-                    "Name" = "8:Interop.NETCONLib.dll"
+                    "Name" = "8:VirtualRouter.Wlan.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Interop.NETCONLib.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_4F26FC34328E4A5EA810CB679F88CA37"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D2E51F14B4FA94ACE57F49A5AE332BD3"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:VirtualRouter.ICS, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_D2E51F14B4FA94ACE57F49A5AE332BD3"
-                    {
-                    "Name" = "8:VirtualRouter.ICS.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:VirtualRouter.ICS.dll"
+            "SourcePath" = "8:VirtualRouter.Wlan.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_4F26FC34328E4A5EA810CB679F88CA37"
@@ -597,14 +597,14 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Virtual Router v0.9 Beta"
-        "ProductCode" = "8:{74DEDA1E-E187-461C-9E64-EA717DCF9FAA}"
-        "PackageCode" = "8:{89643EC1-7331-4050-A3F0-DDF0216DA995}"
+        "ProductCode" = "8:{8DB05F7E-1F7A-4CC0-882F-375B97F04CD4}"
+        "PackageCode" = "8:{5768D548-5485-41A4-B8AE-BD14AB2BE083}"
         "UpgradeCode" = "8:{B678C270-B87E-4F13-81A0-2CFB8A2A30DC}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:0.8.0"
+        "ProductVersion" = "8:0.9.0"
         "Manufacturer" = "8:Chris Pietschmann"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://virtualrouter.codeplex.com"
@@ -1156,7 +1156,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_60C96C10613C4542A8AE7EC12D9F22D4"
             {
-            "SourcePath" = "8:..\\VirtualRouterService\\obj\\Debug\\VirtualRouterService.exe"
+            "SourcePath" = "8:..\\VirtualRouterService\\obj\\Release\\VirtualRouterService.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_4F26FC34328E4A5EA810CB679F88CA37"
@@ -1184,7 +1184,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_6DF9FFA751E047258582EFA9DD19C706"
             {
-            "SourcePath" = "8:..\\VirtualRouterClient\\obj\\Debug\\VirtualRouterClient.exe"
+            "SourcePath" = "8:..\\VirtualRouterClient\\obj\\Release\\VirtualRouterClient.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_4F26FC34328E4A5EA810CB679F88CA37"
@@ -1212,7 +1212,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B2AEC479D33647999FD47320FB65AD1D"
             {
-            "SourcePath" = "8:..\\VirtualRouterHostConsole\\obj\\Debug\\VirtualRouterHostConsole.exe"
+            "SourcePath" = "8:..\\VirtualRouterHostConsole\\obj\\Release\\VirtualRouterHostConsole.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_4F26FC34328E4A5EA810CB679F88CA37"
