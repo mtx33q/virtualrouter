@@ -8,6 +8,8 @@
 using System;
 using System.Threading;
 using System.Windows;
+using System.Diagnostics;
+using System.Collections.Generic;
 
 namespace VirtualRouterClient
 {
@@ -17,6 +19,12 @@ namespace VirtualRouterClient
     public partial class App : Application
     {
         private Thread threadServiceChecker;
+
+        public void Activate()
+        {
+            this.MainWindow.WindowState = WindowState.Normal;
+            this.MainWindow.Activate();
+        }
 
         protected override void OnStartup(StartupEventArgs e)
         {
