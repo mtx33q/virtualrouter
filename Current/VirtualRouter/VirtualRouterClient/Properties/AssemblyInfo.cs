@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Chris Pietschmann (http://pietschsoft.com)")]
 [assembly: AssemblyProduct("VirtualRouter")]
-[assembly: AssemblyCopyright("Copyright © Chris Pietschmann 2009")]
+[assembly: AssemblyCopyright("Copyright © Chris Pietschmann 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
