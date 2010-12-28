@@ -25,7 +25,7 @@ namespace VirtualRouterClient.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("VirtualRouter")]
+        [global::System.Configuration.DefaultSettingValueAttribute("VirtualRouter.codeplex.com")]
         public string SSID {
             get {
                 return ((string)(this["SSID"]));
