@@ -1,6 +1,15 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{309F2994-F1A4-452F-93C9-7E1CF78F30FA}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.txt = Readme.txt
+		TODO.txt = TODO.txt
+		VirtualRouter.jpg = VirtualRouter.jpg
+		VirtualRouter.pdn = VirtualRouter.pdn
+		VirtualRouterSetupBanner.jpg = VirtualRouterSetupBanner.jpg
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualRouterClient", "VirtualRouterClient\VirtualRouterClient.csproj", "{F88A9FF2-101B-467D-9E59-AB8C2A769C38}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualRouter.ICS", "VirtualRouter.ICS\VirtualRouter.ICS.csproj", "{002ADBFD-5268-4562-810D-0625267A5673}"
@@ -15,20 +24,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualRouterHostConsole", 
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "VirtualRouterInstaller", "VirtualRouterInstaller\VirtualRouterInstaller.vdproj", "{445CCB9F-1C2E-410D-8618-3B55EE28E362}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{309F2994-F1A4-452F-93C9-7E1CF78F30FA}"
-	ProjectSection(SolutionItems) = preProject
-		Readme.txt = Readme.txt
-		TODO.txt = TODO.txt
-		VirtualRouter.jpg = VirtualRouter.jpg
-		VirtualRouter.pdn = VirtualRouter.pdn
-		VirtualRouterSetupBanner.jpg = VirtualRouterSetupBanner.jpg
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
 		SccNumberOfProjects = 8
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs03.codeplex.com/
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs03
 		SccLocalPath0 = .
 		SccProjectUniqueName1 = VirtualRouter.ICS\\VirtualRouter.ICS.csproj
 		SccProjectName1 = VirtualRouter.ICS
