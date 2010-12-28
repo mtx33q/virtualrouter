@@ -15,62 +15,50 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_080C1B72446A19D8049128BAA75FC812"
+        "MsmKey" = "8:_5391938088D0FD162716532FCAF15551"
         "OwnerKey" = "8:_60C96C10613C4542A8AE7EC12D9F22D4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_080C1B72446A19D8049128BAA75FC812"
+        "MsmKey" = "8:_5391938088D0FD162716532FCAF15551"
         "OwnerKey" = "8:_B2AEC479D33647999FD47320FB65AD1D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_080C1B72446A19D8049128BAA75FC812"
-        "OwnerKey" = "8:_40CE20CB6E3FAF8A05CAD56D04FB010D"
+        "MsmKey" = "8:_5391938088D0FD162716532FCAF15551"
+        "OwnerKey" = "8:_D360996A20B2F1BD1DB8643BACD790BF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_080C1B72446A19D8049128BAA75FC812"
-        "OwnerKey" = "8:_2FB0742BE7B85554B873B0CA0C4CE307"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_2FB0742BE7B85554B873B0CA0C4CE307"
-        "OwnerKey" = "8:_60C96C10613C4542A8AE7EC12D9F22D4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_2FB0742BE7B85554B873B0CA0C4CE307"
-        "OwnerKey" = "8:_B2AEC479D33647999FD47320FB65AD1D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_2FB0742BE7B85554B873B0CA0C4CE307"
-        "OwnerKey" = "8:_40CE20CB6E3FAF8A05CAD56D04FB010D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_40CE20CB6E3FAF8A05CAD56D04FB010D"
-        "OwnerKey" = "8:_60C96C10613C4542A8AE7EC12D9F22D4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_40CE20CB6E3FAF8A05CAD56D04FB010D"
-        "OwnerKey" = "8:_B2AEC479D33647999FD47320FB65AD1D"
+        "MsmKey" = "8:_5391938088D0FD162716532FCAF15551"
+        "OwnerKey" = "8:_AEA0FCFBF005653BC39C1FA6281D5C71"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_60C96C10613C4542A8AE7EC12D9F22D4"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_63476D31BCE054EBD587BC4DA9892916"
+        "OwnerKey" = "8:_60C96C10613C4542A8AE7EC12D9F22D4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_63476D31BCE054EBD587BC4DA9892916"
+        "OwnerKey" = "8:_B2AEC479D33647999FD47320FB65AD1D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_63476D31BCE054EBD587BC4DA9892916"
+        "OwnerKey" = "8:_D360996A20B2F1BD1DB8643BACD790BF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -87,26 +75,44 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_AEA0FCFBF005653BC39C1FA6281D5C71"
+        "OwnerKey" = "8:_60C96C10613C4542A8AE7EC12D9F22D4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AEA0FCFBF005653BC39C1FA6281D5C71"
+        "OwnerKey" = "8:_B2AEC479D33647999FD47320FB65AD1D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AEA0FCFBF005653BC39C1FA6281D5C71"
+        "OwnerKey" = "8:_D360996A20B2F1BD1DB8643BACD790BF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_B2AEC479D33647999FD47320FB65AD1D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CB9FBCBB65B301036A7CD421E077648E"
+        "MsmKey" = "8:_D360996A20B2F1BD1DB8643BACD790BF"
         "OwnerKey" = "8:_60C96C10613C4542A8AE7EC12D9F22D4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CB9FBCBB65B301036A7CD421E077648E"
+        "MsmKey" = "8:_D360996A20B2F1BD1DB8643BACD790BF"
         "OwnerKey" = "8:_B2AEC479D33647999FD47320FB65AD1D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CB9FBCBB65B301036A7CD421E077648E"
-        "OwnerKey" = "8:_40CE20CB6E3FAF8A05CAD56D04FB010D"
+        "MsmKey" = "8:_E58CD854430F16BCF33E1C1310467663"
+        "OwnerKey" = "8:_5391938088D0FD162716532FCAF15551"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -118,25 +124,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_40CE20CB6E3FAF8A05CAD56D04FB010D"
+        "OwnerKey" = "8:_D360996A20B2F1BD1DB8643BACD790BF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CB9FBCBB65B301036A7CD421E077648E"
+        "OwnerKey" = "8:_63476D31BCE054EBD587BC4DA9892916"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2FB0742BE7B85554B873B0CA0C4CE307"
+        "OwnerKey" = "8:_AEA0FCFBF005653BC39C1FA6281D5C71"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_080C1B72446A19D8049128BAA75FC812"
+        "OwnerKey" = "8:_5391938088D0FD162716532FCAF15551"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -360,7 +366,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "Version" = "8:3.5.30729"
+                "FrameworkVersion" = "8:3.5.30729"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=76617"
                 }
@@ -368,14 +374,14 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_080C1B72446A19D8049128BAA75FC812"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5391938088D0FD162716532FCAF15551"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Interop.NETCONLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Interop.NETCONLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_080C1B72446A19D8049128BAA75FC812"
+                    "_5391938088D0FD162716532FCAF15551"
                     {
                     "Name" = "8:Interop.NETCONLib.dll"
                     "Attributes" = "3:512"
@@ -399,51 +405,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2FB0742BE7B85554B873B0CA0C4CE307"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_63476D31BCE054EBD587BC4DA9892916"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:VirtualRouter.ICS, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:VirtualRouter.Wlan, Version=0.9.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_2FB0742BE7B85554B873B0CA0C4CE307"
+                    "_63476D31BCE054EBD587BC4DA9892916"
                     {
-                    "Name" = "8:VirtualRouter.ICS.dll"
+                    "Name" = "8:VirtualRouter.Wlan.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:VirtualRouter.ICS.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_4F26FC34328E4A5EA810CB679F88CA37"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_40CE20CB6E3FAF8A05CAD56D04FB010D"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:VirtualRouterHost, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_40CE20CB6E3FAF8A05CAD56D04FB010D"
-                    {
-                    "Name" = "8:VirtualRouterHost.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:VirtualRouterHost.dll"
+            "SourcePath" = "8:VirtualRouter.Wlan.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_4F26FC34328E4A5EA810CB679F88CA37"
@@ -481,21 +456,72 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CB9FBCBB65B301036A7CD421E077648E"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AEA0FCFBF005653BC39C1FA6281D5C71"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:VirtualRouter.Wlan, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:VirtualRouter.ICS, Version=0.9.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_CB9FBCBB65B301036A7CD421E077648E"
+                    "_AEA0FCFBF005653BC39C1FA6281D5C71"
                     {
-                    "Name" = "8:VirtualRouter.Wlan.dll"
+                    "Name" = "8:VirtualRouter.ICS.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:VirtualRouter.Wlan.dll"
+            "SourcePath" = "8:VirtualRouter.ICS.dll"
             "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_4F26FC34328E4A5EA810CB679F88CA37"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D360996A20B2F1BD1DB8643BACD790BF"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:VirtualRouterHost, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_D360996A20B2F1BD1DB8643BACD790BF"
+                    {
+                    "Name" = "8:VirtualRouterHost.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:VirtualRouterHost.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_4F26FC34328E4A5EA810CB679F88CA37"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E58CD854430F16BCF33E1C1310467663"
+            {
+            "SourcePath" = "8:hnetcfg.dll"
+            "TargetName" = "8:hnetcfg.dll"
             "Tag" = "8:"
             "Folder" = "8:_4F26FC34328E4A5EA810CB679F88CA37"
             "Condition" = "8:"
@@ -596,10 +622,11 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Virtual Router v0.9 Beta"
-        "ProductCode" = "8:{8DB05F7E-1F7A-4CC0-882F-375B97F04CD4}"
-        "PackageCode" = "8:{5768D548-5485-41A4-B8AE-BD14AB2BE083}"
+        "ProductName" = "8:Virtual Router v1.0"
+        "ProductCode" = "8:{3A81E9EF-1148-4ABE-AA33-E011CB0454B6}"
+        "PackageCode" = "8:{3D974732-4E35-44EC-99FF-0C91CEF3DCE5}"
         "UpgradeCode" = "8:{B678C270-B87E-4F13-81A0-2CFB8A2A30DC}"
+        "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
@@ -1156,7 +1183,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_60C96C10613C4542A8AE7EC12D9F22D4"
             {
-            "SourcePath" = "8:..\\VirtualRouterService\\obj\\Release\\VirtualRouterService.exe"
+            "SourcePath" = "8:..\\VirtualRouterService\\obj\\x86\\Debug\\VirtualRouterService.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_4F26FC34328E4A5EA810CB679F88CA37"
@@ -1184,7 +1211,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_6DF9FFA751E047258582EFA9DD19C706"
             {
-            "SourcePath" = "8:..\\VirtualRouterClient\\obj\\Release\\VirtualRouterClient.exe"
+            "SourcePath" = "8:..\\VirtualRouterClient\\obj\\x86\\Debug\\VirtualRouterClient.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_4F26FC34328E4A5EA810CB679F88CA37"
@@ -1212,7 +1239,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B2AEC479D33647999FD47320FB65AD1D"
             {
-            "SourcePath" = "8:..\\VirtualRouterHostConsole\\obj\\Release\\VirtualRouterHostConsole.exe"
+            "SourcePath" = "8:..\\VirtualRouterHostConsole\\obj\\x86\\Debug\\VirtualRouterHostConsole.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_4F26FC34328E4A5EA810CB679F88CA37"
