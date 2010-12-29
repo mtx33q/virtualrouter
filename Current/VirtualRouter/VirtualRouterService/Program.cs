@@ -18,9 +18,9 @@ namespace VirtualRouterService
         {
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[] 
-		    { 
-			    new VirtualRouterWindowsService() 
-		    };
+            { 
+                new VirtualRouterWindowsService() 
+            };
             ServiceBase.Run(ServicesToRun);
         }
     }

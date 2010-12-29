@@ -433,33 +433,54 @@ namespace VirtualRouterClient
         {
             if (myApp.IsVirtualRouterServiceConnected)
             {
-                SharableConnection previousItem = cbSharedConnection.SelectedItem as SharableConnection;
-
-                cbSharedConnection.Items.Clear();
                 cbSharedConnection.DisplayMemberPath = "Name";
+                
                 var connections = myApp.VirtualRouter.GetSharableConnections();
-                foreach (var c in connections)
-                {
-                    cbSharedConnection.Items.Add(c);
-                }
 
-                if (previousItem == null)
+                Guid selectedId = Guid.Empty;
+                if (myApp.VirtualRouter.IsStarted())
                 {
-                    cbSharedConnection.SelectedIndex = 0;
+                    var sharedConn = myApp.VirtualRouter.GetSharedConnection();
+                    selectedId = sharedConn.Guid;
                 }
                 else
                 {
-                    var newSelectIndex = 0;
-                    for (var i = 0; i < cbSharedConnection.Items.Count - 1; i++)
+                    var previousItem = cbSharedConnection.SelectedItem as SharableConnection;
+                    if (previousItem != null)
                     {
-                        if (previousItem.Guid.ToString() == ((SharableConnection)cbSharedConnection.Items[i]).Guid.ToString())
-                        {
-                            newSelectIndex = i;
-                            break;
-                        }
+                        selectedId = previousItem.Guid;
                     }
-                    cbSharedConnection.SelectedIndex = 0;
                 }
+
+                cbSharedConnection.Items.Clear();
+                foreach (var c in connections)
+                {
+                    cbSharedConnection.Items.Add(c);
+                    if (c.Guid == selectedId)
+                    {
+                        cbSharedConnection.SelectedItem = c;
+                    }
+                }
+
+                
+
+                //if (previousItem == null)
+                //{
+                //    cbSharedConnection.SelectedIndex = 0;
+                //}
+                //else
+                //{
+                //    var newSelectIndex = 0;
+                //    for (var i = 0; i < cbSharedConnection.Items.Count - 1; i++)
+                //    {
+                //        if (previousItem.Guid.ToString() == ((SharableConnection)cbSharedConnection.Items[i]).Guid.ToString())
+                //        {
+                //            newSelectIndex = i;
+                //            break;
+                //        }
+                //    }
+                //    cbSharedConnection.SelectedIndex = 0;
+                //}
             }
         }
 

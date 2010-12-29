@@ -36,25 +36,35 @@ namespace VirtualRouterHost
         {
             try
             {
-                if (this.icsManager.SharingInstalled)
+                if (sharedConnection != null)
                 {
-                    var privateConnectionGuid = this.wlanManager.HostedNetworkInterfaceGuid;
-
-                    if (privateConnectionGuid == Guid.Empty)
+                    if (sharedConnection.Guid != Guid.Empty)
                     {
-                        // If the GUID for the Hosted Network Adapter isn't return properly,
-                        // then retrieve it by the DeviceName.
+                        if (this.icsManager.SharingInstalled)
+                        {
+                            var privateConnectionGuid = this.wlanManager.HostedNetworkInterfaceGuid;
 
-                        privateConnectionGuid = (from c in this.icsManager.Connections
-                                                 where c.props.DeviceName.ToLowerInvariant().Contains("microsoft virtual wifi miniport adapter")
-                                                 select c.Guid).First();
-                        // Note: This may not work correctly if there are multiple wireless adapters within the computer. I don't currently
-                        // have a device to test this on. Ultimately, the "privateConnectionGuid" being Empty is what needs to be fixed.
+                            if (privateConnectionGuid == Guid.Empty)
+                            {
+                                // If the GUID for the Hosted Network Adapter isn't return properly,
+                                // then retrieve it by the DeviceName.
+
+                                privateConnectionGuid = (from c in this.icsManager.Connections
+                                                         where c.props.DeviceName.ToLowerInvariant().Contains("microsoft virtual wifi miniport adapter")
+                                                         select c.Guid).First();
+                                // Note: This may not work correctly if there are multiple wireless adapters within the computer. I don't currently
+                                // have a device to test this on. Ultimately, the "privateConnectionGuid" being Empty is what needs to be fixed.
+                            }
+
+                            this.icsManager.EnableIcs(sharedConnection.Guid, privateConnectionGuid);
+
+                            this.currentSharedConnection = sharedConnection;
+                        }
                     }
-
-                    this.icsManager.EnableIcs(sharedConnection.Guid, privateConnectionGuid);
-
-                    this.currentSharedConnection = sharedConnection;
+                }
+                else
+                {
+                    this.currentSharedConnection = null;
                 }
 
                 this.wlanManager.StartHostedNetwork();
@@ -131,6 +141,9 @@ namespace VirtualRouterHost
             {
                 connections = new List<IcsConnection>();
             }
+
+            // Empty item to signify No Connection Sharing
+            yield return new SharableConnection() { DeviceName = "None", Guid = Guid.Empty, Name = "None" };
 
             if (connections != null)
             {

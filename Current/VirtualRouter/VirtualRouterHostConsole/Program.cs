@@ -45,7 +45,8 @@ namespace VirtualRouterHostConsole
 
 
             var conns = virtualRouterHost.GetSharableConnections();
-            if (!virtualRouterHost.Start(conns.First()))
+            var connToShare = conns.FirstOrDefault();
+            if (!virtualRouterHost.Start(connToShare))
             {
                 Console.WriteLine("ERROR: Virtual Router could not be started. Supported hardware may not have been found.");
                 Console.WriteLine();
