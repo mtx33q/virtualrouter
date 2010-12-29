@@ -461,26 +461,6 @@ namespace VirtualRouterClient
                         cbSharedConnection.SelectedItem = c;
                     }
                 }
-
-                
-
-                //if (previousItem == null)
-                //{
-                //    cbSharedConnection.SelectedIndex = 0;
-                //}
-                //else
-                //{
-                //    var newSelectIndex = 0;
-                //    for (var i = 0; i < cbSharedConnection.Items.Count - 1; i++)
-                //    {
-                //        if (previousItem.Guid.ToString() == ((SharableConnection)cbSharedConnection.Items[i]).Guid.ToString())
-                //        {
-                //            newSelectIndex = i;
-                //            break;
-                //        }
-                //    }
-                //    cbSharedConnection.SelectedIndex = 0;
-                //}
             }
         }
 
