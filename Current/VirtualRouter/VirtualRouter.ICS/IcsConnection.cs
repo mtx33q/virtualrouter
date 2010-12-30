@@ -61,6 +61,7 @@ namespace IcsMgr
                         || props.MediaType == tagNETCON_MEDIATYPE.NCM_PHONE
                         || props.MediaType == tagNETCON_MEDIATYPE.NCM_PPPOE
                         || props.MediaType == tagNETCON_MEDIATYPE.NCM_TUNNEL
+                        || props.MediaType == tagNETCON_MEDIATYPE.NCM_BRIDGE
                     ) && (
                         props.Status != tagNETCON_STATUS.NCS_DISCONNECTED
                     ));
