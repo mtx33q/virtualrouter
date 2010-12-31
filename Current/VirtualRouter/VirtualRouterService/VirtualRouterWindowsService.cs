@@ -39,14 +39,8 @@ namespace VirtualRouterService
                     this.serviceHost.Close();
                 }
 
-                //if (this.virtualRouterHost == null)
-                //{
-                    this.virtualRouterHost = new VirtualRouterHost.VirtualRouterHost();
-                //}
-                //if (this.serviceHost == null)
-                //{
-                    this.serviceHost = new ServiceHost(this.virtualRouterHost);
-                //}
+                this.virtualRouterHost = new VirtualRouterHost.VirtualRouterHost();
+                this.serviceHost = new ServiceHost(this.virtualRouterHost);
 
                 LoadSavedState();
                 
@@ -144,7 +138,10 @@ namespace VirtualRouterService
 
         void SaveState()
         {
+#if DEBUG
             WriteLog("Start Saving State");
+#endif
+
             //Stream stream = null;
             StreamWriter sw = null;
             try
@@ -187,7 +184,9 @@ namespace VirtualRouterService
                     sw.Dispose();
                 }
             }
+#if DEBUG
             WriteLog("State Saved");
+#endif
         }
 
         private void WriteLog(string message)
