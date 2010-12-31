@@ -31,25 +31,32 @@ namespace VirtualRouterService
 
         protected override void OnStart(string[] args)
         {
-            if (this.serviceHost != null)
+            try
             {
-                this.serviceHost.Close();
-            }
+                if (this.serviceHost != null)
+                {
+                    this.serviceHost.Close();
+                }
 
-            if (this.virtualRouterHost == null)
-            {
-                this.virtualRouterHost = new VirtualRouterHost.VirtualRouterHost();
-            }
-            if (this.serviceHost == null)
-            {
-                this.serviceHost = new ServiceHost(this.virtualRouterHost);
-            }
+                //if (this.virtualRouterHost == null)
+                //{
+                    this.virtualRouterHost = new VirtualRouterHost.VirtualRouterHost();
+                //}
+                //if (this.serviceHost == null)
+                //{
+                    this.serviceHost = new ServiceHost(this.virtualRouterHost);
+                //}
 
-            LoadSavedState();
-
-            if (this.serviceHost.State != CommunicationState.Opened)
+                LoadSavedState();
+                
+                if (this.serviceHost.State != CommunicationState.Opened)
+                {
+                    this.serviceHost.Open();
+                }
+            }
+            catch (Exception ex)
             {
-                this.serviceHost.Open();
+                WriteLog("Error Starting Service \n" + ex.ToString());
             }
         }
 
@@ -70,11 +77,7 @@ namespace VirtualRouterService
 
         protected override void OnShutdown()
         {
-            if (virtualRouterHost != null)
-            {
-                SaveState();
-                //this.virtualRouterHost.Stop();
-            }
+            this.OnStop();
         }
 
         protected override void OnPause()

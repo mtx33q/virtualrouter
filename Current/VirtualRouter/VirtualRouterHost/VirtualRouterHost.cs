@@ -36,6 +36,8 @@ namespace VirtualRouterHost
         {
             try
             {
+                this.Stop();
+
                 if (sharedConnection != null)
                 {
                     if (sharedConnection.Guid != Guid.Empty)
@@ -132,6 +134,9 @@ namespace VirtualRouterHost
 
         public IEnumerable<SharableConnection> GetSharableConnections()
         {
+            var sharedConnection = this.GetSharedConnection();
+            var sharedConnectionId = (sharedConnection != null) ? sharedConnection.Guid : Guid.Empty;
+
             List<IcsConnection> connections;
             try
             {
@@ -149,7 +154,7 @@ namespace VirtualRouterHost
             {
                 foreach (var conn in connections)
                 {
-                    if (conn.IsConnected && conn.IsSupported)
+                    if (conn.IsConnected && conn.IsSupported && conn.Guid != sharedConnectionId)
                     {
                         yield return new SharableConnection(conn);
                     }

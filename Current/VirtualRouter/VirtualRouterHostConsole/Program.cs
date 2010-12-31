@@ -54,9 +54,11 @@ namespace VirtualRouterHostConsole
 
 
             Console.WriteLine("Starting Service...");
-            
 
-            serviceHost.Open();
+            if (serviceHost.State != CommunicationState.Opened)
+            {
+                serviceHost.Open();
+            }
 
             Console.WriteLine();
 

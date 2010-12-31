@@ -441,7 +441,10 @@ namespace VirtualRouterClient
                 if (myApp.VirtualRouter.IsStarted())
                 {
                     var sharedConn = myApp.VirtualRouter.GetSharedConnection();
-                    selectedId = sharedConn.Guid;
+                    if (sharedConn != null)
+                    {
+                        selectedId = sharedConn.Guid;
+                    }
                 }
                 else
                 {
