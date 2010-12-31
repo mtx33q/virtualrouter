@@ -2,34 +2,34 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:VirtualRouterClient"
-    Title="Virtual Router Manager v1.0 Beta" Height="462" Width="592.668" MinWidth="449.955" MinHeight="421.776"
+    Title="Virtual Router Manager v1.0 Beta" Height="501" Width="592.668" MinWidth="449.955" MinHeight="421.776"
     Icon="Icons/VirtualRouterDisabled.ico" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
         
         <Rectangle Name="windowContent" Margin="0,42.5,0,0" Fill="White"/>
         
-        <GroupBox Header="Virtual Router Settings" Margin="12.726,48,11.274,0" Name="gbVirtualRouterSettings" Height="117.261" VerticalAlignment="Top">
-            <Grid Height="98.172">
-                <TextBox Height="23" Margin="140,6,67.266,0" Name="txtSSID" VerticalAlignment="Top"></TextBox>
-                <TextBox Margin="140,35,67.266,41.132" Name="txtPassword"></TextBox>
-                <Label Margin="7,32.54,0,0" Name="label1" HorizontalAlignment="Left" Width="120" Height="24.543" VerticalAlignment="Top">Password:</Label>
-                <Label HorizontalAlignment="Left" Margin="6,4,0,0" Name="label2" Width="128" Height="27.04" VerticalAlignment="Top">Network Name (SSID):</Label>
-                <Label Margin="7,62.96,0,0" Name="label3" HorizontalAlignment="Left" Width="121" Height="26.39" VerticalAlignment="Top">Shared Connection:</Label>
-                <ComboBox Margin="140,0,67.266,12.172" Name="cbSharedConnection" Height="23" VerticalAlignment="Bottom" />
-                <Button Height="22.37" HorizontalAlignment="Right" Margin="0,0,16.362,12.172" ToolTip="Refresh Shared Connections" Name="btnRefreshSharableConnections" VerticalAlignment="Bottom" Width="32.724" Click="btnRefreshSharableConnections_Click">
+        <GroupBox Header="Virtual Router Settings" Margin="12.726,48,11.274,0" Name="gbVirtualRouterSettings" Height="176" VerticalAlignment="Top">
+            <Grid Height="151">
+                <TextBox Margin="210,15,5,0" Name="txtSSID" FontSize="20" Height="37" VerticalAlignment="Top"></TextBox>
+                <TextBox Margin="210,58,6,0" Name="txtPassword" Text="" FontSize="20" Height="37" VerticalAlignment="Top"></TextBox>
+                <Label Margin="6,58,0,0" Name="label1" HorizontalAlignment="Left" Width="120" Height="36" VerticalAlignment="Top" FontSize="20">Password:</Label>
+                <Label HorizontalAlignment="Left" Margin="6,15,0,0" Name="label2" Width="208" Height="35" VerticalAlignment="Top" FontSize="20">Network Name (SSID):</Label>
+                <Label Margin="6,101,0,0" Name="label3" HorizontalAlignment="Left" Width="184" Height="38" VerticalAlignment="Top" FontSize="20">Shared Connection:</Label>
+                <ComboBox Margin="210,101,55,0" Name="cbSharedConnection" FontSize="20" Height="38" VerticalAlignment="Top" />
+                <Button Height="38" HorizontalAlignment="Right" Margin="0,0,6,12" ToolTip="Refresh Shared Connections" Name="btnRefreshSharableConnections" VerticalAlignment="Bottom" Width="43" Click="btnRefreshSharableConnections_Click">
                     <Image Source="Icons/Refresh.ico"></Image>
                 </Button>
             </Grid>
         </GroupBox>
         
-        <GroupBox Header="Peers Connected:" Margin="12,200,12,38" Name="groupBoxPeersConnected">
+        <GroupBox Header="Peers Connected:" Margin="12,273,12,38" Name="groupBoxPeersConnected">
             <Grid>
                 <ScrollViewer>
                     <WrapPanel Name="panelConnections"  />
                 </ScrollViewer>
             </Grid>
         </GroupBox>
-        <Button Margin="54,171,55.5,0" Name="btnToggleHostedNetwork" Height="23" VerticalAlignment="Top" Click="btnToggleHostedNetwork_Click">Start Virtual Router</Button>
+        <Button Margin="50,230,60,0" Name="btnToggleHostedNetwork" Height="37" VerticalAlignment="Top" Click="btnToggleHostedNetwork_Click" FontSize="20">Start Virtual Router</Button>
         
         <StatusBar Name="statusBar1" VerticalAlignment="Bottom" Height="31.815">
             <StatusBarItem>
