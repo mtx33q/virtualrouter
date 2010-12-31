@@ -12,6 +12,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceProcess;
+using VirtualRouterHost;
 
 namespace VirtualRouterService
 {
@@ -117,12 +118,17 @@ namespace VirtualRouterService
                             // Get the Shared Connection
                             var conns = this.virtualRouterHost.GetSharableConnections();
 
-                            var sharedConnection = (from c in conns
+
+                            SharableConnection sharedConnection = null;
+                            if (!string.IsNullOrEmpty(state.SharedConnectionGuid))
+                            {
+                                sharedConnection = (from c in conns
                                                     where c.Guid.ToString() == new Guid(state.SharedConnectionGuid).ToString()
                                                     select c).FirstOrDefault();
-                            if (sharedConnection == null)
-                            {
-                                sharedConnection = conns.First();
+                                if (sharedConnection == null)
+                                {
+                                    sharedConnection = conns.First();
+                                }
                             }
 
                             this.virtualRouterHost.Start(sharedConnection);
