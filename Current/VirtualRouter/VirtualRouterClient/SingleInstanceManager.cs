@@ -6,7 +6,7 @@
 * http://virtualrouter.codeplex.com/license
 */
 using Microsoft.VisualBasic.ApplicationServices;
-
+test
 namespace VirtualRouterClient
 {
     public class SingleInstanceManager : WindowsFormsApplicationBase
