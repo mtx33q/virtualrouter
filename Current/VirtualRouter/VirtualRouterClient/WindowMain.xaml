@@ -8,7 +8,7 @@
         
         <Rectangle Name="windowContent" Margin="0,42.5,0,0" Fill="White"/>
         
-        <GroupBox Header="Virtual Router Settings" Margin="12.726,48,11.274,0" Name="gbVirtualRouterSettings" Height="176" VerticalAlignment="Top">
+        <GroupBox Header="Settings" Margin="12.726,48,11.274,0" Name="gbVirtualRouterSettings" Height="176" VerticalAlignment="Top">
             <Grid Height="151">
                 <TextBox Margin="210,15,5,0" Name="txtSSID" FontSize="20" Height="37" VerticalAlignment="Top"></TextBox>
                 <TextBox Margin="210,58,6,0" Name="txtPassword" Text="" FontSize="20" Height="37" VerticalAlignment="Top"></TextBox>
@@ -22,7 +22,7 @@
             </Grid>
         </GroupBox>
         
-        <GroupBox Header="Peers Connected:" Margin="12,273,12,38" Name="groupBoxPeersConnected">
+        <GroupBox Header="Connected Devices" Margin="12,273,12,38" Name="groupBoxPeersConnected">
             <Grid>
                 <ScrollViewer>
                     <WrapPanel Name="panelConnections"  />
