@@ -7,8 +7,8 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Virtual Router Manager Beta")]
-[assembly: AssemblyDescription("Turn any Windows 7 or Windows 2008 R2 Computer into a Wifi Hot Spot!")]
+[assembly: AssemblyTitle("Virtual Router Manager")]
+[assembly: AssemblyDescription("Turn any Windows 7, 8 or 2008 R2 Computer into a Wifi Hot Spot!")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Chris Pietschmann (http://pietschsoft.com)")]
 [assembly: AssemblyProduct("VirtualRouter")]

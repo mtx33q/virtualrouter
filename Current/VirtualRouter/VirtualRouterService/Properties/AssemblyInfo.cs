@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("VirtualRouterService")]
-[assembly: AssemblyDescription("Turn any Windows 7 or Windows 2008 R2 Computer into a Wifi Hot Spot!")]
+[assembly: AssemblyDescription("Turn any Windows 7, 8 or 2008 R2 Computer into a Wifi Hot Spot!")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Chris Pietschmann (http://pietschsoft.com)")]
 [assembly: AssemblyProduct("VirtualRouterService")]
-[assembly: AssemblyCopyright("Copyright © Chris Pietschmann 2011")]
+[assembly: AssemblyCopyright("Copyright © Chris Pietschmann 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
