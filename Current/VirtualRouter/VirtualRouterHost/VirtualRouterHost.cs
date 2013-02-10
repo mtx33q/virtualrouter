@@ -13,6 +13,7 @@ using VirtualRouter.Wlan;
 using IcsMgr;
 using System.ServiceModel;
 using VirtualRouter.Wlan.WinAPI;
+using System.Threading;
 
 namespace VirtualRouterHost
 {
@@ -32,11 +33,21 @@ namespace VirtualRouterHost
 
         #region IVirtualRouterHost Members
 
+        private string _lastErrorMessage;
+        public string GetLastError()
+        {
+            return this._lastErrorMessage;
+        }
+        
         public bool Start(SharableConnection sharedConnection)
         {
             try
             {
                 this.Stop();
+
+                this.wlanManager.StartHostedNetwork();
+
+                Thread.Sleep(1000);
 
                 if (sharedConnection != null)
                 {
@@ -52,10 +63,16 @@ namespace VirtualRouterHost
                                 // then retrieve it by the DeviceName.
 
                                 privateConnectionGuid = (from c in this.icsManager.Connections
-                                                         where c.props.DeviceName.ToLowerInvariant().Contains("microsoft virtual wifi miniport adapter")
-                                                         select c.Guid).First();
-                                // Note: This may not work correctly if there are multiple wireless adapters within the computer. I don't currently
-                                // have a device to test this on. Ultimately, the "privateConnectionGuid" being Empty is what needs to be fixed.
+                                                         where c.props.DeviceName.ToLowerInvariant().Contains("microsoft virtual wifi miniport adapter") // Windows 7
+                                                         || c.props.DeviceName.ToLowerInvariant().Contains("microsoft hosted network virtual adapter") // Windows 8
+                                                         select c.Guid).FirstOrDefault();
+                                // Note: For some reason the DeviceName can have different names, currently it checks for the ones that I have identified thus far.
+
+                                if (privateConnectionGuid == Guid.Empty)
+                                {
+                                    // Device still now found, so throw exception so the message gets raised up to the client.
+                                    throw new Exception("Virtual Wifi device not found!\n\nNeither \"Microsoft Hosted Network Virtual Adapter\" or \"Microsoft Virtual Wifi Miniport Adapter\" were found.");
+                                }
                             }
 
                             this.icsManager.EnableIcs(sharedConnection.Guid, privateConnectionGuid);
@@ -69,12 +86,13 @@ namespace VirtualRouterHost
                     this.currentSharedConnection = null;
                 }
 
-                this.wlanManager.StartHostedNetwork();
+                
 
                 return true;
             }
-            catch
+            catch(Exception ex)
             {
+                this._lastErrorMessage = ex.Message;
                 return false;
             }
         }

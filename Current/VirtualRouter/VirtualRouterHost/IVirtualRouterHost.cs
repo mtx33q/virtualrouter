@@ -42,5 +42,8 @@ namespace VirtualRouterHost
 
         [OperationContract]
         SharableConnection GetSharedConnection();
+
+        [OperationContract]
+        string GetLastError();
     }
 }

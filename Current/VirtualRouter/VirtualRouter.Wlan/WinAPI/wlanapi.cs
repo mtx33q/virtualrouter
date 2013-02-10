@@ -12,7 +12,14 @@ namespace VirtualRouter.Wlan.WinAPI
 {
     public static class wlanapi
     {
+        /// <summary>
+        /// Client version of Windows XP with SP3 and Wireless LAN API for Windows XP with SP2
+        /// </summary>
         public const uint WLAN_CLIENT_VERSION_XP = 1;
+
+        /// <summary>
+        /// Client version for Windows Vista and Windows Server 2008
+        /// </summary>
         public const uint WLAN_CLIENT_VERSION_VISTA = 2;
 
         public const uint WLAN_AVAILABLE_NETWORK_INCLUDE_ALL_ADHOC_PROFILES = 0x00000001;

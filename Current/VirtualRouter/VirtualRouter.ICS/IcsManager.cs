@@ -1,7 +1,7 @@
 ﻿/*
 * Virtual Router v1.0 - http://virtualrouter.codeplex.com
-* Wifi Hot Spot for Windows 7 and 2008 R2
-* Copyright (c) 2011 Chris Pietschmann (http://pietschsoft.com)
+* Wifi Hot Spot for Windows 8, 7 and 2008 R2
+* Copyright (c) 2013 Chris Pietschmann (http://pietschsoft.com)
 * Licensed under the Microsoft Public License (Ms-PL)
 * http://virtualrouter.codeplex.com/license
 */
@@ -60,21 +60,18 @@ namespace IcsMgr
             }
         }
 
-        private List<IcsConnection> _Connections = null;
         public List<IcsConnection> Connections
         {
             get
             {
-                if (this._Connections == null)
-                {
-                    this._Connections = new List<IcsConnection>();
+                var list = new List<IcsConnection>();
 
-                    foreach (INetConnection conn in this._NSManager.EnumEveryConnection)
-                    {
-                        this._Connections.Add(new IcsConnection(this._NSManager, conn));
-                    }
+                foreach (INetConnection conn in this._NSManager.EnumEveryConnection)
+                {
+                    list.Add(new IcsConnection(this._NSManager, conn));
                 }
-                return this._Connections;
+
+                return list;
             }
         }
 

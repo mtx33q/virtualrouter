@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Chris Pietschmann (http://pietschsoft.com)")]
 [assembly: AssemblyProduct("VirtualRouterHostConsole")]
-[assembly: AssemblyCopyright("Copyright (c) Chris Pietschmann 2011")]
+[assembly: AssemblyCopyright("Copyright (c) Chris Pietschmann 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

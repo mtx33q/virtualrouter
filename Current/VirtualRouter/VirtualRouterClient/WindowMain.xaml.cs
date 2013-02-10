@@ -323,7 +323,7 @@ namespace VirtualRouterClient
 
                         if (!myApp.VirtualRouter.Start((SharableConnection)cbSharedConnection.SelectedItem))
                         {
-                            string strMessage = "Virtual Router Could Not Be Started!";
+                            string strMessage = myApp.VirtualRouter.GetLastError() ?? "Virtual Router Could Not Be Started!";
                             lblStatus.Content = strMessage;
                             MessageBox.Show(strMessage, this.Title);
                         }

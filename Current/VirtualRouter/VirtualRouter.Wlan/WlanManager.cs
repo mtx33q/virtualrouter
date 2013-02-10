@@ -8,6 +8,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using System.Threading;
 using VirtualRouter.Wlan.WinAPI;
 
 namespace VirtualRouter.Wlan

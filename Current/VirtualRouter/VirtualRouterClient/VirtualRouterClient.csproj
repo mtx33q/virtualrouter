@@ -203,6 +203,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Service References\VirtualRouterService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="SingleInstanceManager.cs" />
     <Compile Include="WindowMain.xaml.cs">
       <DependentUpon>WindowMain.xaml</DependentUpon>
@@ -239,11 +244,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Service References\VirtualRouterService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="TileView.cs" />
     <Compile Include="VirtualRouterClientInstaller.cs">
       <SubType>Component</SubType>
@@ -269,32 +269,16 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Service References\VirtualRouterService\service.wsdl" />
-    <None Include="Service References\VirtualRouterService\service.xsd" />
-    <None Include="Service References\VirtualRouterService\service1.xsd" />
-    <None Include="Service References\VirtualRouterService\service2.xsd" />
-    <None Include="Service References\VirtualRouterService\VirtualRouterHost.wsdl" />
     <AppDesigner Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\VirtualRouterService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\VirtualRouterService\service.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\VirtualRouterService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\VirtualRouterService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\VirtualRouterService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
+    <None Include="Service References\VirtualRouterService\service.wsdl" />
+    <None Include="Service References\VirtualRouterService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VirtualRouterService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VirtualRouterService\service2.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Service References\VirtualRouterService\VirtualRouterClient.VirtualRouterService.ConnectedPeer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -305,6 +289,10 @@
     <None Include="Service References\VirtualRouterService\VirtualRouterClient.VirtualRouterService.SharableConnection.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\VirtualRouterService\VirtualRouterHost.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\Computer.ico" />
@@ -348,6 +336,24 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\VirtualRouterService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VirtualRouterService\service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VirtualRouterService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VirtualRouterService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VirtualRouterService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
