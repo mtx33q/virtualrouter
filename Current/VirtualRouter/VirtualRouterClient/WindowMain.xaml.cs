@@ -17,6 +17,7 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using VirtualRouterClient.Properties;
 using VirtualRouterClient.AeroGlass;
+using System.Reflection;
 
 namespace VirtualRouterClient
 {

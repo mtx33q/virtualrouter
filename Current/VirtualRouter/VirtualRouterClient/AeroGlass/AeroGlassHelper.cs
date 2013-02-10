@@ -147,14 +147,18 @@ namespace VirtualRouterClient.AeroGlass
 
             public static Win32.Margins GetDpiAdjustedMargins(IntPtr windowHandle, int left, int right, int top, int bottom)
             {
+                float DesktopDpiX;
+                float DesktopDpiY;
                 // Get System Dpi
-                System.Drawing.Graphics desktop = System.Drawing.Graphics.FromHwnd(windowHandle);
-                float DesktopDpiX = desktop.DpiX;
-                float DesktopDpiY = desktop.DpiY;
+                using (System.Drawing.Graphics desktop = System.Drawing.Graphics.FromHwnd(windowHandle))
+                {
+                    DesktopDpiX = desktop.DpiX;
+                    DesktopDpiY = desktop.DpiY;
+                }
 
                 // Set Margins
                 Win32.Margins margins = new Win32.Margins();
-
+                
                 // Note that the default desktop Dpi is 96dpi. The  margins are
                 // adjusted for the system Dpi.
                 margins.Left = Convert.ToInt32(left * (DesktopDpiX / 96));
