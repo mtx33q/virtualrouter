@@ -65,13 +65,14 @@ namespace VirtualRouterHost
                                 privateConnectionGuid = (from c in this.icsManager.Connections
                                                          where c.props.DeviceName.ToLowerInvariant().Contains("microsoft virtual wifi miniport adapter") // Windows 7
                                                          || c.props.DeviceName.ToLowerInvariant().Contains("microsoft hosted network virtual adapter") // Windows 8
+                                                         || c.props.DeviceName.ToLowerInvariant().Contains("microsoft állandó hálózati virtuális adapter") // Hungarian local
                                                          select c.Guid).FirstOrDefault();
                                 // Note: For some reason the DeviceName can have different names, currently it checks for the ones that I have identified thus far.
 
                                 if (privateConnectionGuid == Guid.Empty)
                                 {
                                     // Device still now found, so throw exception so the message gets raised up to the client.
-                                    throw new Exception("Virtual Wifi device not found!\n\nNeither \"Microsoft Hosted Network Virtual Adapter\" or \"Microsoft Virtual Wifi Miniport Adapter\" were found.");
+                                    throw new Exception("Virtual Wifi device not found!\n\nNeither \"Microsoft Hosted Network Virtual Adapter\" or \"Microsoft Virtual Wifi Miniport Adapter\" or \"Microsoft állandó hálózati virtuális adapter\" were found.");
                                 }
                             }
 
